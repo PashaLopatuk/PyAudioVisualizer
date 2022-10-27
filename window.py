@@ -1,4 +1,5 @@
 
+from math import sqrt
 import pygame
 from sys import exit
 
@@ -18,7 +19,7 @@ def delay(x):
     pygame.time.delay(x)
 
 def draw(x, h):
-    pygame.draw.rect(screen, black, pygame.Rect(x*window_width/24, 0, window_width/24, window_height*(1-h)))
+    pygame.draw.rect(screen, black, pygame.Rect(x*window_width/24, 0, window_width/24, window_height*sqrt(1-h)))
 
 def fill():
     pygame.display.flip()
